@@ -1,0 +1,23 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EPFL | MGT-418: Convex Optimization | Project 4, Data Description %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The network characteristics are embedded in the data structure displayed below.
+
+All parameters are in per unit and based on the base power data.base.MVA. This is just for reference. You will not need it in the implementation.
+
+For example, access the conductance matrix as: data.G
+
+data.c				(Nx1) production cost of real power at each node 
+	.G				(NxN) conductance matrix
+	.B				(NxN) susceptance matrix
+	.p		.d		(Nx1) active power demand at each node
+	.q		.d		(Nx1) reactive
+	.p		.min	(Nx1) lower bound on active power production at each node
+	.p		.max	(Nx1) upper
+	.q		.min	(Nx1) lower bound on reactive power production at each node
+	.q		.max	(Nx1) upper
+	.v		.min	(Nx1) lower bound voltage at each node
+	.v		.max	(Nx1) upper
+	.base	.MVA	(1x1) base power 
